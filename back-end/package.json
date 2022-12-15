@@ -21,6 +21,8 @@
   },
   "homepage": "https://github.com/BuddhiEash/property_ninja#readme",
   "dependencies": {
+    "dotenv": "^16.0.3",
+    "pg": "^8.8.0",
     "typescript": "^4.7.4"
   }
 }
