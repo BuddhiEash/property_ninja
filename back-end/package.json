@@ -4,25 +4,23 @@
   "description": "This is the Property Ninja Back-end",
   "main": "index.js",
   "scripts": {
+    "build": "tsc",
+    "start": "node dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/BuddhiEash/property_ninja.git"
-  },
-  "keywords": [
-    "Property",
-    "Ninja"
-  ],
+  "keywords": [],
   "author": "Don Buddhi Eashwarage",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/BuddhiEash/property_ninja/issues"
-  },
-  "homepage": "https://github.com/BuddhiEash/property_ninja#readme",
   "dependencies": {
-    "dotenv": "^16.0.3",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "@types/dotenv": "^8.2.0",
+    "@types/express": "^4.17.15",
+    "@types/node": "^18.11.16",
+    "@types/pg": "^8.6.5",
     "pg": "^8.8.0",
-    "typescript": "^4.7.4"
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.4"
   }
 }

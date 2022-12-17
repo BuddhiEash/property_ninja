@@ -1,26 +1,35 @@
-declare var require: any
-declare var process: any
-const { Pool, Client } = require('pg')
-const dotenv = require('dotenv')
+import express from "express";
+import dotenv from "dotenv";
+import { Client } from "pg";
+
+const app = express();
 dotenv.config();
- 
+
 const query = {
-  // give the query a unique name
-  name: 'fetch-apartment',
-  text: 'SELECT * FROM apartment WHERE id = $1',
-  values: ['3a73a4e5-e9e5-4628-b928-8c580778657d'],
-}
+  name: "fetch-apartment",
+  text: "SELECT * FROM apartment WHERE id = $1",
+  values: ["3a73a4e5-e9e5-4628-b928-8c580778657d"],
+};
 const client = new Client({
   user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
   host: process.env.DB_HOST,
   database: process.env.DB_NAME,
-  password: process.env.DB_PASSWORD,
-  port: process.env.DB_PORT,
-})
-client.connect()
+  port: 5432,
+});
+client.connect();
 
 // promise
+
 client
   .query(query)
-  .then((res:any) => console.log(res.rows[0].name))
-  .catch((e:any) => console.error(e.stack))
+  .then((res: any) => console.log(res.rows[0].name))
+  .catch((e: any) => console.error(e.stack));
+
+app.get("/", (req, res) => {
+  res.send("Node, Typescript and Express server");
+});
+
+app.listen(3000, () => {
+  console.log("The application is listening on port 3000!");
+});
