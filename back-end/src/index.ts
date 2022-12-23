@@ -1,5 +1,5 @@
 import express from "express";
-import { client } from "./pgsql";
+import { dbConn } from "./pgsql";
 
 const app = express();
 
