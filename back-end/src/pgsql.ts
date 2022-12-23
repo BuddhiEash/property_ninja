@@ -8,7 +8,7 @@ const query = {
   text: "SELECT * FROM apartment WHERE id = $1",
   values: ["3a73a4e5-e9e5-4628-b928-8c580778657d"],
 };
-export const dbConn = new Client({
+const dbConn = new Client({
   user: process.env.DB_USER,
   password: process.env.DB_PASSWORD,
   host: process.env.DB_HOST,
@@ -17,9 +17,11 @@ export const dbConn = new Client({
 });
 dbConn.connect();
 
+export let queryReturnedVal: string = "";
+
 // promise
 
 dbConn
   .query(query)
-  .then((res: any) => console.log(res.rows[0].name))
+  .then((res: any) => { queryReturnedVal = res.rows[0].name; })
   .catch((e: any) => console.error(e.stack));
