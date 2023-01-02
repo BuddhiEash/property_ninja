@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1672106821180" clover="3.2.0">
+  <project timestamp="1672106821180" name="All files">
+    <metrics statements="13" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="1" elements="16" coveredelements="12" complexity="0" loc="13" ncloc="13" packages="1" files="2" classes="2"/>
+    <file name="pgsql.ts" path="/Users/buddhieashwarage/Documents/Codes/pet_projects/property_ninja/back-end-nodejs/src/pgsql.ts">
+      <metrics statements="10" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+      <line num="1" count="1" type="stmt"/>
+      <line num="2" count="1" type="stmt"/>
+      <line num="4" count="1" type="stmt"/>
+      <line num="6" count="1" type="stmt"/>
+      <line num="11" count="1" type="stmt"/>
+      <line num="18" count="1" type="stmt"/>
+      <line num="20" count="1" type="stmt"/>
+      <line num="24" count="1" type="stmt"/>
+      <line num="26" count="0" type="stmt"/>
+      <line num="27" count="0" type="stmt"/>
+    </file>
+    <file name="sum.ts" path="/Users/buddhieashwarage/Documents/Codes/pet_projects/property_ninja/back-end-nodejs/src/sum.ts">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <line num="1" count="1" type="stmt"/>
+      <line num="2" count="1" type="stmt"/>
+      <line num="5" count="1" type="stmt"/>
+    </file>
+  </project>
+</coverage>
